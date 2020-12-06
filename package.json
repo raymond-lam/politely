@@ -1,0 +1,48 @@
+{
+  "name": "politely",
+  "version": "1.0.0",
+  "main": "politely.js",
+  "description": "Ensure that a server process gracefully shuts down.",
+  "keywords": [
+    "graceful",
+    "shutdown",
+    "exit",
+    "process",
+    "signal"
+  ],
+  "scripts": {
+    "clean": "rimraf coverage",
+    "test": "eslint --ignore-path=.gitignore . && nyc --reporter=lcov --reporter=text mocha test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raymond-lam/politely.git"
+  },
+  "author": "Raymond Lam",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/raymond-lam/politely/issues"
+  },
+  "homepage": "https://github.com/raymond-lam/politely#readme",
+  "dependencies": {
+    "promise-all-reject-later": "^1.0.12"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^7.14.0",
+    "mocha": "^8.2.1",
+    "nyc": "^15.1.0",
+    "rimraf": "^3.0.2",
+    "sinon": "^9.2.1"
+  },
+  "nyc": {
+    "sourceMap": false,
+    "instrument": true,
+    "lines": 100,
+    "statements": 100,
+    "functions": 100,
+    "branches": 100,
+    "check-coverage": true,
+    "temp-dir": "./coverage/.nyc_output"
+  }
+}
