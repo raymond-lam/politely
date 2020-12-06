@@ -3,3 +3,4 @@
 .gitignore
 coverage
 test.js
+.travis.yml
