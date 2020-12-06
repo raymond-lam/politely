@@ -1,6 +1,11 @@
 politely
 ========
 
+[![npm](https://img.shields.io/npm/v/politely)](https://www.npmjs.com/package/politely)
+[![Build Status](https://travis-ci.com/raymond-lam/politely.svg?branch=master)](https://travis-ci.com/raymond-lam/politely)
+[![Coverage Status](https://coveralls.io/repos/github/raymond-lam/politely/badge.svg?branch=master)](https://coveralls.io/github/raymond-lam/politely?branch=master)
+[![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
+
 Ensure that a server process gracefully shuts down.
 
 When your Node service receives a `SIGINT`, `SIGTERM`, `SIGQUIT`, or `SIGHUP` signal, `politely` runs your shutdown routines and waits for them to finish (or timeout) before allowing the process to terminate.
