@@ -2,6 +2,7 @@
   "name": "politely",
   "version": "1.0.0",
   "main": "politely.js",
+  "types": "politely.d.ts",
   "description": "Ensure that a server process gracefully shuts down.",
   "keywords": [
     "graceful",
