@@ -19,7 +19,10 @@
     "type": "git",
     "url": "git+https://github.com/raymond-lam/politely.git"
   },
-  "author": "Raymond Lam",
+  "author": {
+    "name": "Raymond Lam",
+    "email": "ray@lam-ray.com"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/raymond-lam/politely/issues"
