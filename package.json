@@ -13,7 +13,10 @@
   ],
   "scripts": {
     "clean": "rimraf coverage",
-    "test": "eslint --ignore-path=.gitignore . && nyc --reporter=lcov --reporter=text mocha test.js"
+    "test": "npm run test:lint && npm run test:unit",
+    "test:unit": "mocha test.js",
+    "test:coverage": "nyc --reporter=lcov --reporter=text mocha test.js",
+    "test:lint": "eslint --ignore-path=.gitignore"
   },
   "repository": {
     "type": "git",
@@ -33,7 +36,6 @@
   },
   "devDependencies": {
     "chai": "^4.2.0",
-    "coveralls": "^3.1.0",
     "eslint": "^7.14.0",
     "mocha": "^8.2.1",
     "nyc": "^15.1.0",
