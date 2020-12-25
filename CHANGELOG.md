@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.1.3] - 2020-12-25
+
+### Fixed
+
+- Added .github to .npmignore
+
+### Added
+
+- Added github-actions to Dependabot configuration
+
+### Changed
+
+- Use numbered version of coveralls GitHub Action
+
 ## [1.1.2] - 2020-12-25
 
 ### Added
