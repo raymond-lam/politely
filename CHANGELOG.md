@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.1.2] - 2020-12-25
+
+### Added
+
+- Dependabot configuration
+
+### Changed
+
+- Migrated from Travis-CI to GitHub Actions for CI
+- Updated dev dependencies
+
 ## [1.1.1] - 2020-12-23
 
 ### Fixed
