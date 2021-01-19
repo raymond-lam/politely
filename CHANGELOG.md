@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.1.4] - 2021-01-19
+
+### Fixed
+
+- Fixed bug where `politely` would continue to wait for the start to timeout even after one of the services threw an exception while starting
+
+### Changed
+
+- Updated devDependencies
+- Clarified documentation about return type of `politely`
+
 ## [1.1.3] - 2020-12-25
 
 ### Fixed
