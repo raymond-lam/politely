@@ -3,11 +3,14 @@
 
 'use strict';
 
-const {expect} = require('chai');
+const chai = require('chai');
+const chaiAsPromised = require('chai-as-promised');
 const EventEmitter = require('events');
 const sinon = require('sinon');
 const politely = require('./politely');
 
+chai.use(chaiAsPromised);
+const {expect} = chai;
 const sandbox = sinon.createSandbox();
 
 afterEach(() => {
@@ -157,4 +160,26 @@ describe('politely', function() { // eslint-disable-line func-names
       expect(service.stop.callCount).to.equal(1);
     },
   );
+
+  it('rejects if the promise returned by .start() rejects', async () => {
+    const clock = sandbox.useFakeTimers();
+    sandbox.stub(process, 'exit');
+
+    const err = new Error('fake error');
+    await expect(
+      politely({
+        services: [
+          {
+            start() { return Promise.reject(err); },
+            stop() { return Promise.resolve(); },
+          },
+        ],
+        timeout: 5000,
+      }),
+    ).to.be.rejectedWith(err);
+
+    expect(
+      () => clock.tick(6000),
+    ).not.to.throw();
+  });
 });
