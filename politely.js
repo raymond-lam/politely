@@ -61,7 +61,8 @@ module.exports = async ({
   }, timeout);
 
   logger.info('Starting services...');
-  await all(services.map(service => service.start()));
-  clearTimeout(startTimeout);
+  await all(
+    services.map(service => service.start())
+  ).finally(() => clearTimeout(startTimeout));
   logger.info('Services are started.');
 };
