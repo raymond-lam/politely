@@ -54,6 +54,8 @@ politely({
 - `logger` (optional) - A object with `info`, `warn`, and `error` methods that accept an argument for a log message string.
 - `timeout` (optional, default: 30000) - A positive integer, which is the number of milliseconds `politely` will wait.
 
+`politely` returns a Promise which resolves when all services are started.
+
 ## Author
 
 Raymond Lam (ray@lam-ray.com)
