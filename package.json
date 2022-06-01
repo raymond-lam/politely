@@ -41,7 +41,7 @@
     "mocha": "^9.0.1",
     "nyc": "^15.1.0",
     "rimraf": "^3.0.2",
-    "sinon": "^13.0.0"
+    "sinon": "^14.0.0"
   },
   "nyc": {
     "sourceMap": false,
